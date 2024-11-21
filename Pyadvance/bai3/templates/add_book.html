@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Thêm sách{% endblock %}
+{% block content %}
+<h2>Thêm sách mới</h2>
+<form method="post">
+    <label>ISBN:</label><br>
+    <input type="text" name="isbn" required><br><br>
+    <label>Tên sách:</label><br>
+    <input type="text" name="title" required><br><br>
+    <label>Tác giả:</label><br>
+    <input type="text" name="author" required><br><br>
+    <label>Nhà xuất bản:</label><br>
+    <input type="text" name="publisher" required><br><br>
+    <label>Năm xuất bản:</label><br>
+    <input type="number" name="year" required><br><br>
+    <label>Thể loại:</label><br>
+    <input type="text" name="genre" required><br><br>
+    <button type="submit">Thêm sách</button>
+</form>
+{% endblock %}

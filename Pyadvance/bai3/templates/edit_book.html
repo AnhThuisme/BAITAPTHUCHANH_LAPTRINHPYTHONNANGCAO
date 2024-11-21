@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sửa sách{% endblock %}
+{% block content %}
+<h2>Sửa sách - ISBN: {{ book['isbn'] }}</h2>
+<form method="post">
+    <label>Tên sách:</label><br>
+    <input type="text" name="title" value="{{ book['title'] }}"><br><br>
+    <label>Tác giả:</label><br>
+    <input type="text" name="author" value="{{ book['author'] }}"><br><br>
+    <label>Nhà xuất bản:</label><br>
+    <input type="text" name="publisher" value="{{ book['publisher'] }}"><br><br>
+    <label>Năm xuất bản:</label><br>
+    <input type="number" name="year" value="{{ book['year'] }}"><br><br>
+    <label>Thể loại:</label><br>
+    <input type="text" name="genre" value="{{ book['genre'] }}"><br><br>
+    <button type="submit">Cập nhật sách</button>
+</form>
+{% endblock %}
